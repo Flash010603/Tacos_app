@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;800&display=swap');
+*{ padding: 0; margin: 0; box-sizing: border-box; }
+body{ font-family: 'Poppins', sans-serif; font-size: 20px; }
+
+
+.titulo{
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: .2em 0;
+    font-size: 3em;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    
+}
+.container .contenedor {
+    display: flex;
+}
+.login_contenedor .contenedor .caja{
+    width: 50%;
+    min-height: 600px;
+    border-radius: 10px;
+    text-align: center;
+}
+.login_contenedor .contenedor .caja:nth-child(1){
+    background-color: rgba(123, 81, 221, 0.596);
+}
+.caja_imagen{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.caja_imagen img{
+  width: 70%;
+  vertical-align: top;
+}
+
+.login_contenedor .contenedor .caja:nth-child(2){
+    background-color: #e6dede;
+}
+.caja_formulario{
+   padding: 4em 2em 2em 2em;
+}
+.caja_formulario .grupo_input{
+    width: 100%;
+    margin: 2em 0;
+}
+.caja_formulario .grupo_input input{
+    width: 100%;
+    padding: .7em;
+    font-size: 1.4rem;
+}
+.caja_formulario .grupo_input label{
+    display: inline-block;
+    width: 100%;
+    text-align: start;
+    margin-bottom: .3em;
+}
+.botones{
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.botones button{
+    cursor: pointer;
+    outline: none;
+    padding: 1em 0;
+    border-radius: 30px;
+    border:none;
+    padding: .8em 0;
+    font-size: 1.3rem;
+    
+}
+.botones button:nth-child(1){
+    background-color: rgba(123, 81, 221, 0.596);
+    color: black;
+    font-weight: bold;
+}
+.botones button:nth-child(1):hover{
+    background-color: rgba(123, 81, 221, 0.863);
+    color: black;
+}
+.google:nth-child(3){
+    border: 1px solid black;
+}
+.botones span{
+    margin: .4em 0;
+    font-size: 1.3em;
+    font-weight: normal;
+}
+.crear_cuenta{
+    text-align: center;
+    margin-top: 1em;
+    font-size: 1.3em;
+}
+.crear_cuenta span{
+    color: rgba(0, 0, 255, 0.582);
+    cursor: pointer;
+    font-weight: bold;
+}
+.crear_cuenta span:hover{
+    color: blue;
+}
+
+
+/* ===========	 Footer 	=======================*/
+.footer{
+    margin-top: 5em;
+    overflow: hidden;
+}
+footer{
+    background-color: #b4acac;
+    margin-top: 5em;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+}
+
+footer::before{
+    content: "";
+    width: 150vw;
+    height: 500px;
+    z-index: -1;
+    translate: 0 -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    background-color: #b4acac;
+    border-radius: 100%;
+}
+
+.contenedor_iconos{
+    margin-bottom: 1em;
+    width: 40%;
+    text-align: center;
+    font-size: 2em;
+}
+.iconos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: .5em;
+}
+.iconos .icono_contendor{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid black;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.iconos .icono_contendor:hover{
+    color: white;
+    border: 1px solid transparent;
+}
+.iconos .icono_contendor:nth-child(1):hover{
+    background-color: #3b5998;
+}
+.iconos .icono_contendor:nth-child(2):hover{
+    background-color: #125688;
+}
+.iconos .icono_contendor:nth-child(3):hover{
+    background-color: #55acee;
+}
+.iconos .icono_contendor:nth-child(4):hover{
+    background-color: #bb0000;
+}
