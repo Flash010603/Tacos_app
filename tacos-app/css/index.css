@@ -12,16 +12,16 @@ body{ font-family: 'Poppins', sans-serif; font-size: 20px; }
 }
 
 .container{
-    width: 90%;
+    width: 80%;
     margin: auto;
-    
+    min-height: 100vh;
 }
 .container .contenedor {
     display: flex;
 }
 .login_contenedor .contenedor .caja{
     width: 50%;
-    min-height: 600px;
+    min-height: 500px;
     border-radius: 10px;
     text-align: center;
 }
@@ -35,7 +35,7 @@ body{ font-family: 'Poppins', sans-serif; font-size: 20px; }
 }
 
 .caja_imagen img{
-  width: 70%;
+  width: 80%;
   vertical-align: top;
 }
 
@@ -43,7 +43,7 @@ body{ font-family: 'Poppins', sans-serif; font-size: 20px; }
     background-color: #e6dede;
 }
 .caja_formulario{
-   padding: 4em 2em 2em 2em;
+   padding: 0em 2em 0 2em;
 }
 .caja_formulario .grupo_input{
     width: 100%;
@@ -63,7 +63,7 @@ body{ font-family: 'Poppins', sans-serif; font-size: 20px; }
 .botones{
     width: 85%;
     margin: 0 auto;
-    margin-top: 3em;
+    margin-bottom: 2em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -112,7 +112,6 @@ body{ font-family: 'Poppins', sans-serif; font-size: 20px; }
 
 /* ===========	 Footer 	=======================*/
 .footer{
-    margin-top: 5em;
     overflow: hidden;
 }
 footer{
@@ -138,18 +137,19 @@ footer::before{
 
 .contenedor_iconos{
     margin-bottom: 1em;
-    width: 40%;
+    width: 50%;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 .iconos {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 80%;
     margin: 0 auto;
-    margin-top: .5em;
+    margin-top: .8em;
 }
+
 .iconos .icono_contendor{
     width: 70px;
     height: 70px;
@@ -161,10 +161,21 @@ footer::before{
     cursor: pointer;
     transition: all .2s ease-in-out;
 }
+.icono_contendor i {
+    scale: .5;
+    transition: all .2s ease-in;
+}
+
 .iconos .icono_contendor:hover{
     color: white;
     border: 1px solid transparent;
 }
+
+.iconos .icono_contendor:hover i{
+    scale: 1;
+}
+
+
 .iconos .icono_contendor:nth-child(1):hover{
     background-color: #3b5998;
 }
