@@ -1,7 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;800&display=swap');
-*{ padding: 0; margin: 0; box-sizing: border-box; }
-body{ font-family: 'Poppins', sans-serif; font-size: 20px; }
+/* =========== = =======================*/
+/* 		 Variables 
+/* =========== = =======================*/
 
+@import url('./general/variables.css');
+
+/* =========== = =======================*/
+/* 		 Fuente 
+/* =========== = =======================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;800&display=swap');
+
+/* =========== = =======================*/
+/* 		 Footer 
+/* =========== = =======================*/
+
+@import url('./general/footer.css');
+
+
+/* =========== = =======================*/
+/* 		 GENERALES 
+/* =========== = =======================*/
+
+*{ padding: 0; margin: 0; box-sizing: border-box; }
+body{ font-family: 'Poppins', sans-serif; font-size: 16px; background-color: #f2f2f2; }
+.container .contenedor, .caja_imagen, .botones, .iconos .icono_contendor , .iconos, .input {
+    display: flex;
+}
+
+b{
+    margin-right: 2px;
+}
+
+/* =========== = =======================*/
+/* 		 Login Screen 
+/* =========== = =======================*/
 
 .titulo{
     font-weight: normal;
@@ -9,6 +41,7 @@ body{ font-family: 'Poppins', sans-serif; font-size: 20px; }
     text-align: center;
     margin: .2em 0;
     font-size: 3em;
+    color: var(--azul);
 }
 
 .container{
@@ -16,26 +49,31 @@ body{ font-family: 'Poppins', sans-serif; font-size: 20px; }
     margin: auto;
     min-height: 100vh;
 }
-.container .contenedor {
-    display: flex;
-}
+
 .login_contenedor .contenedor .caja{
     width: 50%;
     min-height: 500px;
     border-radius: 10px;
     text-align: center;
+    box-shadow: 15px 20px 16px -13px rgba(0,0,0,0.75);
 }
 .login_contenedor .contenedor .caja:nth-child(1){
-    background-color: rgba(123, 81, 221, 0.596);
+    background-color: var(--fondo-morado);
 }
 .caja_imagen{
-    display: flex;
-    justify-content:center;
+    justify-content:space-evenly;
     align-items: center;
+    flex-direction: column;
 }
-
+.caja_imagen p{
+    font-size: 3em;
+    border-radius: 5px;
+    background-color: rgb(123, 81, 221);
+    color: rgb(228, 222, 222);
+    padding: 5px 1em;
+}
 .caja_imagen img{
-  width: 80%;
+  width: 65%;
   vertical-align: top;
 }
 
@@ -49,22 +87,49 @@ body{ font-family: 'Poppins', sans-serif; font-size: 20px; }
     width: 100%;
     margin: 2em 0;
 }
+.input{
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px solid rgb(73, 72, 72);
+}
+.input i {
+    width: 10%;
+    font-size: 1.4rem;
+}
+.erorr_input{
+    border: 2px solid rgb(211, 47, 47);
+}
+
+.icono_error{
+    color: rgb(231, 20, 20);
+    transform: scale(1.1);
+}
 .caja_formulario .grupo_input input{
-    width: 100%;
+    width: 90%;
     padding: .7em;
     font-size: 1.4rem;
+    border: none;
+    border-left:1px solid rgb(73, 72, 72);
+    outline: none;
+}
+.caja_formulario .grupo_input .error_input_input{
+    border-left:1px solid rgb(211, 47, 47);
 }
 .caja_formulario .grupo_input label{
     display: inline-block;
     width: 100%;
     text-align: start;
     margin-bottom: .3em;
+    font-size: 1.2rem;
 }
 .botones{
     width: 85%;
     margin: 0 auto;
     margin-bottom: 2em;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -79,12 +144,12 @@ body{ font-family: 'Poppins', sans-serif; font-size: 20px; }
     
 }
 .botones button:nth-child(1){
-    background-color: rgba(123, 81, 221, 0.596);
+    background-color: var(--fondo-morado);
     color: black;
     font-weight: bold;
 }
 .botones button:nth-child(1):hover{
-    background-color: rgba(123, 81, 221, 0.863);
+    background-color: var(--btn-hover-primary);
     color: black;
 }
 .google:nth-child(3){
@@ -107,84 +172,4 @@ body{ font-family: 'Poppins', sans-serif; font-size: 20px; }
 }
 .crear_cuenta span:hover{
     color: blue;
-}
-
-
-/* ===========	 Footer 	=======================*/
-.footer{
-    overflow: hidden;
-}
-footer{
-    background-color: #b4acac;
-    margin-top: 5em;
-    position: relative;
-    z-index: 100;
-    width: 100%;
-}
-
-footer::before{
-    content: "";
-    width: 150vw;
-    height: 500px;
-    z-index: -1;
-    translate: 0 -100px;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    background-color: #b4acac;
-    border-radius: 100%;
-}
-
-.contenedor_iconos{
-    margin-bottom: 1em;
-    width: 50%;
-    text-align: center;
-    font-size: 1.5em;
-}
-.iconos {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 80%;
-    margin: 0 auto;
-    margin-top: .8em;
-}
-
-.iconos .icono_contendor{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border: 2px solid black;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-}
-.icono_contendor i {
-    scale: .5;
-    transition: all .2s ease-in;
-}
-
-.iconos .icono_contendor:hover{
-    color: white;
-    border: 1px solid transparent;
-}
-
-.iconos .icono_contendor:hover i{
-    scale: 1;
-}
-
-
-.iconos .icono_contendor:nth-child(1):hover{
-    background-color: #3b5998;
-}
-.iconos .icono_contendor:nth-child(2):hover{
-    background-color: #125688;
-}
-.iconos .icono_contendor:nth-child(3):hover{
-    background-color: #55acee;
-}
-.iconos .icono_contendor:nth-child(4):hover{
-    background-color: #bb0000;
 }
