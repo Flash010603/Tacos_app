@@ -11,6 +11,7 @@ const contenedor_registro = document.querySelector('.registro_contenedor');
 // 	EVENTOS
 //======================================
 
+contenedor_registro.style.display = "none";
 
 login_normal.addEventListener('click', (e) => {
     e.preventDefault();
@@ -41,6 +42,7 @@ link.addEventListener('click', () => {
     contenedor_login.classList.add('animate__fadeOutDownBig')
     setTimeout(() => {
         contenedor_login.style.display = "none";
+        contenedor_registro.style.display = ""
     }, 1000);
     
     titulo.textContent = "Registrate ahora";
