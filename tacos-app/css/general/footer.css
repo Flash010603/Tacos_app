@@ -27,6 +27,7 @@ footer::before{
     width: 50%;
     text-align: center;
     font-size: 1.5em;
+    outline: auto;
 }
 .iconos {
     justify-content: space-around;
