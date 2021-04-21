@@ -42,6 +42,8 @@ link.addEventListener('click', () => {
     setTimeout(() => {
         contenedor_login.style.display = "none";
     }, 1000);
+    
+    titulo.textContent = "Registrate ahora";
 });
 
 pass.addEventListener('focus', () => {
