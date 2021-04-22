@@ -88,7 +88,7 @@ header{
 .bloques{
     display: grid;
     grid-template-columns: repeat(2,auto);
-    gap: 5rem 4rem;
+    gap: 4rem 4rem;
     max-width: 100%;
     margin: 5rem 15rem;
     text-align: center;
@@ -100,8 +100,8 @@ header{
     line-height: 1.2;
 }
 .bloque_imagen{
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     background-color: #b4acac;
 }
