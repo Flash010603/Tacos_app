@@ -27,9 +27,10 @@ footer::before{
     width: 50%;
     text-align: center;
     font-size: 1.5em;
-    outline: auto;
+    
 }
 .iconos {
+    display: flex;
     justify-content: space-around;
     align-items: center;
     width: 80%;
@@ -38,6 +39,7 @@ footer::before{
 }
 
 .iconos .icono_contendor{
+    display: flex;
     width: 70px;
     height: 70px;
     border-radius: 50%;

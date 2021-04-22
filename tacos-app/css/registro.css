@@ -2,16 +2,50 @@
 /* 		 Register Screen 
 /* =========== = =======================*/
 
-
-
-
-
-.registro_contenedor .contenedor .caja{
+#img_r{
     width: 50%;
-    min-height: 300px;
+    padding: 1em;
+    position: relative;
+    z-index: -1;
+    display: inline-block;
+}
+.type_d{
+    font-size: .9em;
+}
+#img_r img {
+    width: 80%;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* transform: translateX(15px); */
+}
+.formulario2{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    margin-top: 3em;
+}
+.formulario2 label{
+    display: inline-block;
+    width: 100%;
+    text-align: start;
+    margin-bottom: .3em;
+    font-size: 1.2rem;
+}
+.registro_contenedor .contenedor .caja{
+   
+    min-height: 500px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 15px 20px 16px -13px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+
 }
 .registro_contenedor .contenedor .caja:nth-child(1){
     background-color: var(--fondo-morado);
@@ -30,22 +64,25 @@
     padding: 5px 1em;
 }
 .caja_imagen img{
-  width: 70%;
+
   vertical-align: top;
 }
 
 .registro_contenedor .contenedor .caja:nth-child(2){
     background-color: #e6dede;
 }
+
+
 .caja_formulario2{
-   padding: 0em 2em 0 2em;
+   padding: 0;
+   width: 100% !important;
 }
 .caja_formulario2 .grupo_input{
     width: 100%;
-    margin: 1em 0;
+    margin: 0;
 }
 .input{
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     background-color: white;
     align-items: center;
     justify-content: center;
@@ -69,7 +106,7 @@
 .caja_formulario2 .grupo_input input{
     width: 90%;
     padding: .5em;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     border: none;
     border-left:1px solid rgb(73, 72, 72);
     outline: none;
@@ -80,9 +117,8 @@
 }
 
 .boton{
-    width: 85%;
-    margin: 0 auto;
-    margin-bottom: 2em;
+    width: 40%;
+    margin: 1.5em auto;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -95,7 +131,7 @@
     border:none;
     padding: .6em 2em;
     font-size: 1.3rem;
-    
+    width: 100%;
 }
 .boton button:nth-child(1){
     background-color: var(--fondo-morado);

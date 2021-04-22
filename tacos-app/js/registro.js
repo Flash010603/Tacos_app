@@ -2,18 +2,25 @@ const names = document.querySelector('#nombre');
 const surnames = document.querySelector('#apellidos');
 const email = document.querySelector('#email');
 const username = document.querySelector('#username');
-const pass = document.querySelector('#password');
+const password = document.querySelector('#password');
 const pass_confirm = document.querySelector('#password_confirm');
 const btnCrear = document.querySelector('#crear_cuenta');
 const linkLogin = document.querySelector('#link2')
 
+const contenedor_login_r = document.querySelector('.login_contenedor');
+const contenedor_registro_r = document.querySelector('.registro_contenedor');
 
 
 linkLogin.addEventListener('click', () => {
-    contenedor_login.classList.add('animate__fadeOutDownBig')
+
+    
+    contenedor_registro_r.classList.remove('animate__fadeInDownBig');
+    contenedor_registro_r.classList.add('animate__fadeOutDownBig');
     setTimeout(() => {
-        contenedor_registro.style.display = "none";
-        contenedor_login.style.display = ""
+        contenedor_registro_r.style.display = "none";
+        contenedor_login_r.style.display = "block"
+        contenedor_login_r.classList.add('animate__fadeInDownBig');
+        contenedor_login_r.classList.remove('animate__fadeOutDownBig');
     }, 1000);
     
     titulo.textContent = "Inicio de sesión";
@@ -24,21 +31,22 @@ btnCrear.addEventListener('click', (e) => {
     e.preventDefault();
 
     if (names.value === '' || surnames.value === '' || email.value === '' ||
-        username.value === '' || pass.value === '' || pass_confirm.value === '' ) {
-
-        const data = {
-            names: names.value,
-            surnames: surnames.value,
-            email: email.value,
-            username: username.value,
-            pass: pass.value,
-            pass_confirm: pass_confirm.value
-        }
-        
-        alerta('success', 'Cuenta creada correctamente');
-
-
+        username.value === '' || password.value === '' || pass_confirm.value === '' ) {
+        alerta_n('error', 'Todos los campos son obligatorios')
+        return;
     }
+
+    const data = {
+        names: names.value,
+        surnames: surnames.value,
+        email: email.value,
+        username: username.value,
+        pass: password.value,
+        pass_confirm: pass_confirm.value
+    }
+    console.log(data)
+    
+    alerta_n('success', 'Cuenta creada correctamente');
 });
 
 
@@ -50,7 +58,7 @@ btnCrear.addEventListener('click', (e) => {
 // 	 FUNCIONES
 //======================================
 
-const alerta = (icon, title) => {
+const alerta_n = (icon, title) => {
     const Toast = Swal.mixin({
         toast: true,
         position: 'top-end',

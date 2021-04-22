@@ -38,15 +38,22 @@ login_google.addEventListener('click', (e) => {
     removeClassInput('user')
 });
 
+
 link.addEventListener('click', () => {
-    contenedor_login.classList.add('animate__fadeOutDownBig')
+
+    contenedor_login.classList.remove('animate__fadeInDownBig');
+    contenedor_login.classList.add('animate__fadeOutDownBig');
+    contenedor_registro.classList.remove("animate__fadeOutDownBig")
+
     setTimeout(() => {
         contenedor_login.style.display = "none";
-        contenedor_registro.style.display = ""
+        contenedor_registro.style.display = "block"    
+        contenedor_registro.classList.add("animate__fadeInDownBig")
     }, 1000);
     
     titulo.textContent = "Registrate ahora";
 });
+
 
 pass.addEventListener('focus', () => {
     removeClassInput('pass')
