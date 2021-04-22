@@ -78,4 +78,38 @@ header{
     letter-spacing: 1px;
 }
 
+.titulo__acerca{
+    text-align: center;
+    font-weight: normal;
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap: 5rem 4rem;
+    max-width: 100%;
+    margin: 5rem 15rem;
+    text-align: center;
+    align-items: center;
+
+}
+.bloques p{
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+.bloque_imagen{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #b4acac;
+}
+
+.contenedor__mapa{
+    text-align: center;
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+}
 
