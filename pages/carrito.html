@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/taco.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="../css/carrito.css">
     <title>Carrito</title>
 </head>
+
 <body>
-    
+
     <div class="none">
-            
+
         <header>
             <div class="header">
                 <div class="titulo ">
@@ -26,9 +29,66 @@
 
         <div class="contenedor_main">
 
-            <h1>Carrito</h1>
+            <h1 class="titulo_panel">Resumen de tu pedido</h1>
+            <hr>
+            <div class="table_contenedor">
 
+                <table class="table">
+                    <thead class="cabecera">
+                        <tr>
+                            <th>Nombre del platillo</th>
+                            <th>Cantidad</th>
+                            <th>Precio c/u</th>
+                            <th>Subtotal</th>
+                            <th class="bgnone"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="body">
+                        <tr>
+                            <td class="nombre"> Nombre del platillo </td>
+                            <td>
+                                <div class="grupo_input">
+                                    <button class="mas"><i class="fas fa-plus"></i></button>
+                                    <input type="tel" class="input" id="" disabled>
+                                    <button class="men"><i class="fas fa-minus"></i></button>
+                                </div>
+                            </td>
+                            <td class="bold">$ 50.00</td>
+                            <td class="bold"> $1000.99 </td>
+                            <td>
+                                <button class="eliminar"><i class="far fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                     
+                        <tr>
+                            <td class="nombre"> Nombre del platillo </td>
+                            <td>
+                                <div class="grupo_input">
+                                    <button class="mas"><i class="fas fa-plus"></i></button>
+                                    <input type="tel" class="input" id="" disabled>
+                                    <button class="men"><i class="fas fa-minus"></i></button>
+                                </div>
+                            </td>
+                            <td class="bold">$ 50.00</td>
+                            <td class="bold"> $1000.99 </td>
+                            <td>
+                                <button class="eliminar"><i class="far fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="total">
+                    <div class="total_info">
+                        <p>Total a pagar: $</p>
+                        <p>100000.99</p>
+                    </div>
+                </div>
 
+                <div class="pagar">
+                    <button class="btn_pagar" id="pagar_total">Realizar la compra</button>
+                </div>
+
+            </div>
         </div>
 
         <div class="footer">
@@ -61,5 +121,8 @@
     </div>
 
     <script src="https://kit.fontawesome.com/5fa83d646f.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9/dist/sweetalert2.min.js"></script>
+    <script src="../js/carrito.js"></script>
 </body>
+
 </html>

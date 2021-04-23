@@ -46,10 +46,15 @@ header{
 }
 
 .contenedor_main{
-    outline: auto;
     width: 90%;
     margin: 0 auto;
-    min-height: 95vh;
-    margin-bottom: 5em;
+    min-height: 90vh;
+    margin-bottom: 4em;
     text-align: center;
+}
+
+.titulo_panel{
+    font-size: 4.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
 }
