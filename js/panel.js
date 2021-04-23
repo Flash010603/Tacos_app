@@ -23,6 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 menu_main.addEventListener('click', (e) => {
 
+    const user = JSON.parse(sessionStorage.getItem('usuario')) || [];
+    console.log(user.length)
+
+    if(user.length === 0){
+        alerta_m('warning', '<p class="normal">Para relizar su compra <b>Primero inicie sesión</b></p>', true)
+        return;
+    }
+
     if (e.target.classList.contains('btn_agregar') && !e.target.disabled ) {
 
         const textoBtn = e.target.textContent;
@@ -62,3 +70,21 @@ menu_main.addEventListener('click', (e) => {
 
 });
 
+
+const alerta_m = (icon, title, redirigir = false, entrada = '', salida ='') => {
+    Swal.fire({
+        icon,
+        title,
+        showClass: {
+            popup: entrada
+        },
+        hideClass: {
+            popup: salida
+        },
+        confirmButtonText: 'Entendido'
+    }).then((result) =>{
+        if (result.isConfirmed && redirigir){
+            window.location="../index.html"
+        }
+    })
+};

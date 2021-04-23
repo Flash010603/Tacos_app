@@ -22,12 +22,19 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 pagar_total.addEventListener('click', () => {
-    const precio_fin = total_precio.textContent;
-    alerta_('success', `<p class="normal">Su compra se ha realizado, total a pagar: $ <b>${precio_fin} MX</b></p>`);
-    setTimeout(() => {
-        limpiartabla();
-        sessionStorage.removeItem('pedido')
-    }, 500);
+
+    const usuario = JSON.parse(sessionStorage.getItem('usuario')) || [];
+
+    if(usuario.length !== 0){
+        const precio_fin = total_precio.textContent;
+        alerta_('success', `<p class="normal">Su compra se ha realizado, total a pagar: $ <b>${precio_fin} MX</b></p>`, false, 'animate__animated animate__fadeInDown', 'animate__animated animate__fadeOutUp');
+        setTimeout(() => {
+            limpiartabla();
+            sessionStorage.removeItem('pedido')
+        }, 500);
+    }else{
+        alerta_('warning', '<p class="normal">Para relizar su compra <b>Primero inicie sesión</b></p>', true);
+    }
 });
 
 table.addEventListener('click', (e) => {
@@ -80,17 +87,21 @@ const limpiartabla = () => {
     `;
 };
 
-const alerta_ = (icon, title) => {
+const alerta_ = (icon, title, redirigir = false, entrada = '', salida ='') => {
     Swal.fire({
         icon,
         title,
         showClass: {
-            popup: 'animate__animated animate__fadeInDown'
+            popup: entrada
         },
         hideClass: {
-            popup: 'animate__animated animate__fadeOutUp'
+            popup: salida
         },
         confirmButtonText: 'Entendido'
+    }).then((result) =>{
+        if (result.isConfirmed && redirigir){
+            window.location="../index.html"
+        }
     })
 };
 

@@ -23,9 +23,13 @@ login_normal.addEventListener('click', (e) => {
             pass: pass.value
         }
         document.querySelector('.formulario').reset();
-        alerta('success', 'Inicio de sesión correcto');
+        alerta('success', 'Inicio de sesión correcto', 1000);
 
+        sessionStorage.setItem('usuario',JSON.stringify(data));
 
+        setTimeout(() => {
+            window.location = "../pages/panel.html"
+        }, 1000);
     }
 });
 
@@ -67,12 +71,12 @@ user.addEventListener('focus', () => {
 // 	 FUNCIONES
 //======================================
 
-const alerta = (icon, title) => {
+const alerta = (icon, title, timer = 3000) => {
     const Toast = Swal.mixin({
         toast: true,
         position: 'top-end',
         showConfirmButton: false,
-        timer: 3000,
+        timer,
         timerProgressBar: true,
         didOpen: (toast) => {
             toast.addEventListener('mouseenter', Swal.stopTimer)
@@ -106,6 +110,7 @@ const errorInputs = () => {
         pass_txt.classList.add("erorr_input");
         errores += 1;
     }
+
 
     (errores !== 0) && alerta('error', 'Los campos son obligatorios');
 

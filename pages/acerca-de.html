@@ -22,14 +22,14 @@
 
         <div class="menu">
             <label for="menu" class="menu_label"><i class="fas fa-bars"></i></label>
-            <input type="checkbox" name="" id="menu" checked="false">
+            <input type="checkbox" name="" id="menu" >
             <nav>
                 <label for="menu" class="btn_cerrar"><i class="far fa-times-circle"></i></label>
                 <div class="contenedor_items_menu">
                     <a href="../index.html" class="item_menu"><span>Home <i class="fas fa-home"></i></span></a>
                     <a href="./panel.html" class="item_menu"><span>Menú<i class="fas fa-utensils"></i></span></a>
                     <a href="./carrito.html" class="item_menu"><span>Carrito<i class="fas fa-shopping-cart"></i></span></a>
-                    <a href="./acerca-de.html" class="item_menu"><span>Acerca de <i class="fas fa-info"></i></span></a>
+                    <p class="item_menu"><span>Acerca de <i class="fas fa-info"></i></span></p>
                 </div>
                 <div class="img_menu">
                     <img src="../img/taco.png" alt="">
@@ -136,6 +136,11 @@
 
     <script>
 
+        document.addEventListener('DOMContentLoaded',()=>{
+            document.querySelector('#menu').checked = false
+        });
+
+   
         var mymap = L.map('mapid').setView([25.906720882097954, -100.20563326748584], 15);
 
         var marker = L.marker([25.907531553081718, -100.20852470146271]).addTo(mymap);
