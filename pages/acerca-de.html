@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
     <link rel="shortcut icon" href="../img/taco.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <link rel="stylesheet" href="../css/acerca-de.css">
     <title>Acerca de</title>
 </head>
+
 <body>
 
     <div class="none">
@@ -22,26 +29,32 @@
                 </div>
             </div>
         </header>
-        
+
         <main class="contenedor">
             <h1 class="titulo__acerca">Acerca de nosotros</h1>
 
             <div class="bloques">
 
                 <div class="bloque">
-                    <p>enean sollicitudin finibus nisl at ultrices. Donec dolor elit, congue id mauris a, maximus consectetur purus. Vestibulum sollicitudin at ante egestas ultricies. Sed ultrices ipsum velit, feugiat gravida tellus luctus eget. Curabitur eget justo bibendum, cursus velit vel, fermentum felis. Donec sodales erat quis fermentum fringilla. Vivamus lectus nisi,</p>
+                    <p>enean sollicitudin finibus nisl at ultrices. Donec dolor elit, congue id mauris a, maximus
+                        consectetur purus. Vestibulum sollicitudin at ante egestas ultricies. Sed ultrices ipsum velit,
+                        feugiat gravida tellus luctus eget. Curabitur eget justo bibendum, cursus velit vel, fermentum
+                        felis. Donec sodales erat quis fermentum fringilla. Vivamus lectus nisi,</p>
                 </div>
-                
-                <div class="bloque">
-                    <img class="bloque_imagen">
+
+                <div class="bloque_con">
+                    <!-- <img class="bloque_imagen" src="../img/add-user.png"> -->
+                </div>
+
+                <div class="bloque_con">
+                    <!-- <img class="bloque_imagen" src="../img/add-user.png"> -->
                 </div>
 
                 <div class="bloque">
-                    <img class="bloque_imagen">
-                </div>
-
-                <div class="bloque">
-                    <p>enean sollicitudin finibus nisl at ultrices. Donec dolor elit, congue id mauris a, maximus consectetur purus. Vestibulum sollicitudin at ante egestas ultricies. Sed ultrices ipsum velit, feugiat gravida tellus luctus eget. Curabitur eget justo bibendum, cursus velit vel, fermentum felis. Donec sodales erat quis fermentum fringilla. Vivamus lectus nisi,</p>
+                    <p>enean sollicitudin finibus nisl at ultrices. Donec dolor elit, congue id mauris a, maximus
+                        consectetur purus. Vestibulum sollicitudin at ante egestas ultricies. Sed ultrices ipsum velit,
+                        feugiat gravida tellus luctus eget. Curabitur eget justo bibendum, cursus velit vel, fermentum
+                        felis. Donec sodales erat quis fermentum fringilla. Vivamus lectus nisi,</p>
                 </div>
 
 
@@ -50,23 +63,24 @@
 
             </div>
 
-            
-    
-    
+
+
+
         </main>
         <section>
             <h1 class="titulo__acerca">Ubicados en</h1>
 
             <div class="contenedor__mapa">
-                <img src="../img/mapaFake.png" alt="">
+                <!-- <img src="../img/mapaFake.png" alt=""> -->
+                <div id="mapid"></div>
             </div>
 
-            
+
         </section>
-    
-    
-    
-    
+
+
+
+
         <div class="footer">
             <footer>
                 <div class="contenedor_iconos">
@@ -95,6 +109,31 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
     <script src="https://kit.fontawesome.com/5fa83d646f.js"></script>
+
+    <script>
+
+        var mymap = L.map('mapid').setView([25.906720882097954, -100.20563326748584], 15);
+
+        var marker = L.marker([25.907531553081718, -100.20852470146271]).addTo(mymap);
+        marker.bindPopup("<b>Estamos aquí!</b>").openPopup();
+
+        L.tileLayer(
+            "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZnJhbmtvMzYxIiwiYSI6ImNraXBjdXQ2YzA1MGcydGw3OTNta3lkNWgifQ.dDooExcrHvZCnS45LzXOkg",
+            {
+                maxZoom: 20,
+                id: "mapbox/streets-v11",
+                tileSize: 512,
+                zoomOffset: -1,
+                accessToken: "your.mapbox.access.token",
+            }
+        ).addTo(mymap);
+
+    </script>
+
 </body>
+
 </html>

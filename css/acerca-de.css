@@ -13,6 +13,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;800&display=swap');
 
 /* =========== = =======================*/
+/* 		 Header 
+/* =========== = =======================*/
+
+@import url('./general/header.css');
+
+
+/* =========== = =======================*/
 /* 		 Footer 
 /* =========== = =======================*/
 
@@ -26,69 +33,19 @@
 
 body{ font-family: 'Poppins', sans-serif; font-size: 16px;}
 
-.contenedor{
-    margin: 0 auto;
-    min-height: 100vh;
-    height: 100vh;
-    overflow: hidden;
-    background-color: #e2e2e2;
-}
 
-header{
-    width: 100%;
-    height: 70vh;
-    overflow: hidden;
-}
-.header{
-    height: 70vh;
-    width: 140vw;
-    background-color: #b4acac;
-    border-radius: 50%;
-    position: relative;
-    left: 50%;
-    top:0;
-    transform: translate(-50%, -30%);
-}
-
-.contenedor_img{
-    position: fixed;
-    bottom: -15%;
-    left: 22%;
-    border-radius: 50%;
-
-    width: 300px;
-    height: 300px;
-    z-index: 100;
-    background-color: rgb(130, 58, 211);
-
-    display: flex;
-    justify-content:center;
-    align-items: center;
-}
-.contenedor_img img{
-    width: 70%;
-}
-.titulo{
-    position: absolute;
-    right: 20%;
-    bottom: 30%;
-    font-size: 2em;
-}
-.titulo h1{
-    letter-spacing: 1px;
-}
 
 .titulo__acerca{
     text-align: center;
     font-weight: normal;
     font-size: 3rem;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
 }
 
 .bloques{
     display: grid;
     grid-template-columns: repeat(2,auto);
-    gap: 4rem 4rem;
+    gap: 1em;
     max-width: 100%;
     margin: 5rem 15rem;
     text-align: center;
@@ -97,19 +54,42 @@ header{
 }
 .bloques p{
     font-size: 1.2rem;
-    line-height: 1.2;
+    /* line-height: 1.2; */
 }
-.bloque_imagen{
-    width: 250px;
-    height: 250px;
+.bloque_con{
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
-    background-color: #b4acac;
+    background: url('../img/add-user.png');
+    background-size: 79.5%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
 }
-
+/* .bloque_con img {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: top;
+} */
 .contenedor__mapa{
     text-align: center;
-    width: 100%;
-    height: 300px;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    height: 80vh;
     background-size: cover;
+    background-color: #363333; 
+    padding: 2em;
+    border-radius: 5px;
+}
+#mapid { 
+    height:100%; 
+    width: 90%;
+    margin: 0 auto;
 }
 
+/* .contenedor__mapa img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
