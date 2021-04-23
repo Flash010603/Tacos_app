@@ -16,6 +16,23 @@
 
     <div class="none">
 
+        <div class="menu">
+            <label for="menu" class="menu_label"><i class="fas fa-bars"></i></label>
+            <input type="checkbox" name="" id="menu" checked="false">
+            <nav>
+                <label for="menu" class="btn_cerrar"><i class="far fa-times-circle"></i></label>
+                <div class="contenedor_items_menu">
+                    <a href="../index.html" class="item_menu"><span>Home <i class="fas fa-home"></i></span></a>
+                    <a href="./panel.html" class="item_menu"><span>Menú<i class="fas fa-utensils"></i></span></a>
+                    <a href="./carrito.html" class="item_menu"><span>Carrito<i class="fas fa-shopping-cart"></i></span></a>
+                    <a href="./acerca-de.html" class="item_menu"><span>Acerca de <i class="fas fa-info"></i></span></a>
+                </div>
+                <div class="img_menu">
+                    <img src="../img/taco.png" alt="">
+                </div>
+            </nav>
+        </div>
+
         <header>
             <div class="header">
                 <div class="titulo ">
@@ -37,6 +54,7 @@
                     <thead class="cabecera">
                         <tr>
                             <th>Nombre del platillo</th>
+                            <th>Imagen</th>
                             <th>Cantidad</th>
                             <th>Precio c/u</th>
                             <th>Subtotal</th>
@@ -44,43 +62,15 @@
                         </tr>
                     </thead>
                     <tbody class="body">
-                        <tr>
-                            <td class="nombre"> Nombre del platillo </td>
-                            <td>
-                                <div class="grupo_input">
-                                    <button class="mas"><i class="fas fa-plus"></i></button>
-                                    <input type="tel" class="input" id="" disabled>
-                                    <button class="men"><i class="fas fa-minus"></i></button>
-                                </div>
-                            </td>
-                            <td class="bold">$ 50.00</td>
-                            <td class="bold"> $1000.99 </td>
-                            <td>
-                                <button class="eliminar"><i class="far fa-trash-alt"></i></button>
-                            </td>
-                        </tr>
-                     
-                        <tr>
-                            <td class="nombre"> Nombre del platillo </td>
-                            <td>
-                                <div class="grupo_input">
-                                    <button class="mas"><i class="fas fa-plus"></i></button>
-                                    <input type="tel" class="input" id="" disabled>
-                                    <button class="men"><i class="fas fa-minus"></i></button>
-                                </div>
-                            </td>
-                            <td class="bold">$ 50.00</td>
-                            <td class="bold"> $1000.99 </td>
-                            <td>
-                                <button class="eliminar"><i class="far fa-trash-alt"></i></button>
-                            </td>
-                        </tr>
+                        
+                        
+
                     </tbody>
                 </table>
                 <div class="total">
                     <div class="total_info">
                         <p>Total a pagar: $</p>
-                        <p>100000.99</p>
+                        <p id="total_precio">100000.99</p>
                     </div>
                 </div>
 

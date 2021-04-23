@@ -13,6 +13,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;800&display=swap");
 
 /* =========== = =======================*/
+/* 		 Menu 
+/* =========== = =======================*/
+
+@import url('./general/menu.css');
+
+/* =========== = =======================*/
 /* 		 Header 
 /* =========== = =======================*/
 @import url("./general/header.css");
@@ -23,6 +29,9 @@
 
 @import url("./general/footer.css");
 
+.menu{
+    position: fixed;
+}
 /* =========== = =======================*/
 /* 		 GENERALES 
 /* =========== = =======================*/
@@ -95,13 +104,22 @@ table {
 
 .body .grupo_input button, .eliminar{
     height: 100%;
-    padding: 1em;
+    padding: 1em 2em;
     cursor: pointer;
     border-radius: 5px;
     color: white;
     flex: 1.5em;
 }
+.eliminar{
+    
+    padding: .5em 1em;
+    text-align: center;
+    font-size: 1.8em;
+  
+}
 .grupo_input .mas{
+    font-size: 2em;
+    padding: 0 !important;
     background-color: rgb(218, 89, 89);
     border: 1px solid rgb(221, 54, 54);
 }
@@ -109,6 +127,8 @@ table {
     background-color: rgb(221, 54, 54);
 }
 .grupo_input .men{
+    font-size: 2em;
+    padding: 0 !important;
     background-color: rgb(91, 89, 218);
     border: 1px solid rgb(48, 45, 199);
 }

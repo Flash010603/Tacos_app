@@ -19,6 +19,26 @@
 <body>
 
     <div class="none">
+
+        <div class="menu">
+            <label for="menu" class="menu_label"><i class="fas fa-bars"></i></label>
+            <input type="checkbox" name="" id="menu" checked="false">
+            <nav>
+                <label for="menu" class="btn_cerrar"><i class="far fa-times-circle"></i></label>
+                <div class="contenedor_items_menu">
+                    <a href="../index.html" class="item_menu"><span>Home <i class="fas fa-home"></i></span></a>
+                    <a href="./panel.html" class="item_menu"><span>Menú<i class="fas fa-utensils"></i></span></a>
+                    <a href="./carrito.html" class="item_menu"><span>Carrito<i class="fas fa-shopping-cart"></i></span></a>
+                    <a href="./acerca-de.html" class="item_menu"><span>Acerca de <i class="fas fa-info"></i></span></a>
+                </div>
+                <div class="img_menu">
+                    <img src="../img/taco.png" alt="">
+                </div>
+            </nav>
+        </div>
+
+
+
         <header>
             <div class="header">
                 <div class="titulo ">
@@ -30,43 +50,47 @@
             </div>
         </header>
 
-        <main class="contenedor">
-            <h1 class="titulo__acerca">Acerca de nosotros</h1>
+        <div class="contenedor">
+            <h2 class="titulo__acerca">Acerca de nosotros</h2>
 
-            <div class="bloques">
+            <div class="acerca_de">
+                <div class="contenedor_items">
 
-                <div class="bloque">
-                    <p>enean sollicitudin finibus nisl at ultrices. Donec dolor elit, congue id mauris a, maximus
-                        consectetur purus. Vestibulum sollicitudin at ante egestas ultricies. Sed ultrices ipsum velit,
-                        feugiat gravida tellus luctus eget. Curabitur eget justo bibendum, cursus velit vel, fermentum
-                        felis. Donec sodales erat quis fermentum fringilla. Vivamus lectus nisi,</p>
+                    <div class="item_acerca">
+                        <div class="info_acerca">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aliquam, impedit, quo aperiam
+                                facere quibusdam ex cupiditate sequi fuga ratione magni recusandae optio nobis
+                                exercitationem sapiente. Ipsam est officia reprehenderit!</p>
+                        </div>
+                        <div class="img_cont_acerca">
+                            <div class="img_acerca">
+                                <img src="../img/follow.png" alt="" srcset="">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+                <div class="contenedor_items">
 
-                <div class="bloque_con">
-                    <!-- <img class="bloque_imagen" src="../img/add-user.png"> -->
+                    <div class="item_acerca_down">
+                        <div class="img_cont_acerca">
+                            <div class="img_acerca">
+                                <img src="../img/follow.png" alt="" srcset="">
+                            </div>
+                        </div>
+                        <div class="info_acerca_down">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aliquam, impedit, quo aperiam
+                                facere quibusdam ex cupiditate sequi fuga ratione magni recusandae optio nobis
+                                exercitationem sapiente. Ipsam est officia reprehenderit!</p>
+                        </div>
+
+                    </div>
+
                 </div>
-
-                <div class="bloque_con">
-                    <!-- <img class="bloque_imagen" src="../img/add-user.png"> -->
-                </div>
-
-                <div class="bloque">
-                    <p>enean sollicitudin finibus nisl at ultrices. Donec dolor elit, congue id mauris a, maximus
-                        consectetur purus. Vestibulum sollicitudin at ante egestas ultricies. Sed ultrices ipsum velit,
-                        feugiat gravida tellus luctus eget. Curabitur eget justo bibendum, cursus velit vel, fermentum
-                        felis. Donec sodales erat quis fermentum fringilla. Vivamus lectus nisi,</p>
-                </div>
-
-
-
-
-
             </div>
+        </div>
 
 
-
-
-        </main>
         <section>
             <h1 class="titulo__acerca">Ubicados en</h1>
 
@@ -75,11 +99,7 @@
                 <div id="mapid"></div>
             </div>
 
-
         </section>
-
-
-
 
         <div class="footer">
             <footer>
