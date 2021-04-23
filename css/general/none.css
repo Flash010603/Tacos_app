@@ -16,8 +16,9 @@
         color: white;
         font-size: 3em;
         text-align: center;
-        content: "No disponible en dispositivos moviles aún ☎️";
+        content: "No disponible para el puñetas del KIKE 👿";
         position: absolute;
+        font-weight: bold;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -37,10 +38,10 @@
 
     html::before{
         color: white;
-        font-size: 1em;
-        
+        font-size: 1.5em;
+        font-weight: bold;
         text-align: center;
-        content: "No disponible en dispositivos moviles aun ☎️";
+        content: "No disponible para el puñetas del KIKE 👿";
         position: absolute;
         left: 50%;
         top: 50%;
