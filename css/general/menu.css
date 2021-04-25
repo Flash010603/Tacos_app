@@ -7,7 +7,8 @@ input[type="checkbox"]{
     z-index: 10000;
     color: white;
     padding: 0em 5em;
-    /* position: fixed; */
+    position: fixed;
+    top:0;
     /* color: black; */
     display: flex;
     justify-content:end;
@@ -33,34 +34,43 @@ input[type="checkbox"]{
     color: rgb(22, 21, 21);
 }
 
-input[type="checkbox"]:checked ~ nav{
-    display: block;
-    left: 0;
-    z-index: 1000;
-}
 
 nav{
     background: rgba(29, 28, 28, 0.959);
     position: absolute;
     top: 0;
     left: -100%;
-    display: none;
+    /* display: none; */
     width: 30%;
     height: 100vh;
     color: white;
     padding: 1em;
-    transition: all .5s ease-out;
+    transition: all .5s ease;
     z-index: -1000;
 }
+
+input[type="checkbox"]:checked ~ nav{
+    /* display: block; */
+    left: 0;
+    z-index: 1000;
+    transition: all .5s ease;
+}
+
 nav .btn_cerrar{
+    position: relative;
+    left: 87%;
     display: inline-block;
-    width: 100%;
+    width: 15%;
     padding-right: .3em;
     font-size: 2.8em;
     text-align: end;
     cursor: pointer;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.411) ;
+    /* border-bottom: 2px solid rgba(255, 255, 255, 0.411) ; */
     color: rgba(202, 36, 36, 0.753);
+    
+}
+nav > hr{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.411) ;  
 }
 nav .btn_cerrar:hover{
     color: rgb(202, 36, 36);
@@ -155,5 +165,58 @@ nav .item_menu span i{
     }
     100%{
         transform:scale(.8);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .menu{
+        padding: 1em;
+        justify-content:flex-end;
+        position: fixed;
+    }    
+    nav{
+        background: rgb(29, 28, 28);
+        position: fixed;
+        top: 0;
+        left: -100%;
+        /* display: none; */
+        width: 100%;
+        height: 100vh;
+        color: white;
+        padding: 1em;
+        transition: all .5s ease;
+        z-index: -1000;
+    }
+
+    nav .item_menu{
+        border-bottom: 4px solid rgba(255, 255, 255, 0.466);
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: 1em;
+        background-color: rgba(255, 255, 255, 0.219);
+    }
+    nav .item_menu span{
+        text-align: center;
+        position: relative;
+    }
+    .img_menu img{
+        width: 55%;
+    }
+    .img_menu{
+        
+        width: 100px;
+        height: 100px;
+    }
+    nav .btn_cerrar{
+        position: relative;
+        left: 86.8%;
+        display: inline-block;
+        width: 15%;
+        padding-right: .3em;
+        font-size: 2.3em;
+
+        
     }
 }

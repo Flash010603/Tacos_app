@@ -1,10 +1,9 @@
-@import url('./general/none.css');
 
 /* =========== = =======================*/
 /* 		 Variables 
 /* =========== = =======================*/
 
-@import url('./general/variables.css');
+@import url('../general/variables.css');
 
 /* =========== = =======================*/
 /* 		 Fuente 
@@ -16,12 +15,12 @@
 /* 		 Menu 
 /* =========== = =======================*/
 
-@import url('./general/menu.css');
+@import url('../general/menu.css');
 
 /* =========== = =======================*/
 /* 		 Header 
 /* =========== = =======================*/
-@import url('./general/header.css');
+@import url('../general/header.css');
 
 
 
@@ -29,7 +28,7 @@
 /* 		 Footer 
 /* =========== = =======================*/
 
-@import url('./general/footer.css');
+@import url('../general/footer.css');
 
 .menu{
     position: fixed;
@@ -66,7 +65,7 @@ body{ font-family: 'Poppins', sans-serif; font-size: 16px;}
     width: 100%;
     height: 100%;
     background: #000;
-    background: url('../img/taco.png');
+    background: url('../../img/taco.png');
     background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
