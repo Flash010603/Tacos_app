@@ -44,4 +44,8 @@
   .crear_cuenta{
     margin: 1em 0;
   }
+
+  #typed{
+    margin-top: .5em;
+  }
 }

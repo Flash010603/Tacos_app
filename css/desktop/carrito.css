@@ -152,7 +152,7 @@ table {
 .total{
     width: 100%;
     display: flex;
-    justify-content:end;
+    justify-content:center;
     align-items: center;
     margin: 3em 0;
 }
@@ -196,7 +196,7 @@ table {
     font-weight: normal;
 }
 .mensaje{
-    width: 80%;
+    width: 100%;
     margin: auto;
     margin-top: 20px;
 

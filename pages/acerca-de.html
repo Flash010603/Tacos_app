@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="../img/taco.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <link rel="stylesheet" href="../css/desktop/acerca-de.css">
+    <link rel="stylesheet" href="../css/acerca-de.css">
     <title>Acerca de</title>
 </head>
 
@@ -140,7 +140,12 @@
         document.addEventListener('DOMContentLoaded',()=>{
             document.querySelector('#menu').checked = false
         });
-
+        const checkbox = document.querySelector('#menu');
+        checkbox.addEventListener('change', ()=>{
+            (checkbox.checked) 
+            ? document.body.style.overflow = 'hidden' 
+            : document.body.style.overflow = 'auto'
+        }); 
    
         var mymap = L.map('mapid').setView([25.906720882097954, -100.20563326748584], 15);
 

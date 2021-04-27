@@ -49,7 +49,7 @@
                 <div class="contenedor">
 
                     <div class="caja caja_imagen">
-                        <p> <span class="typed"></span></p>
+                        <p id="typed"> <span class="typed"></span></p>
 
                         <img src="img/taco.png" alt="">
                     </div>
@@ -210,6 +210,13 @@
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('#menu').checked = false
         });
+        
+        const checkbox = document.querySelector('#menu');
+        checkbox.addEventListener('change', ()=>{
+            (checkbox.checked) 
+            ? document.body.style.overflow = 'hidden' 
+            : document.body.style.overflow = 'auto'
+        }); 
 
         var typed = new Typed('.typed', {
             strings: [
