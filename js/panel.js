@@ -26,7 +26,7 @@ menu_main.addEventListener('click', (e) => {
     const user = JSON.parse(sessionStorage.getItem('usuario')) || [];
     console.log(user.length)
 
-    if(user.length === 0){
+    if(user.length === 0 && e.target.classList.contains("btn_agregar")){
         alerta_m('warning', '<p class="normal">Para relizar su compra <b>Primero inicie sesión</b></p>', true)
         return;
     }
